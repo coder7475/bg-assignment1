@@ -1,8 +1,8 @@
 # Typescript Assignment of PH
 
-1. What are some differences between interfaces and types in TypeScript?
+Assignment Link: <https://github.com/Apollo-Level2-Web-Dev/B5-Assignment-1>
 
-## Blog Post: Differences Between Interfaces and Types in TypeScript
+## Blog Post Q1: Differences Between Interfaces and Types in TypeScript
 
 Both **types** and **interfaces** in TypeScript define custom types to enforce structure and type safety,
 but they have distinct features, use cases, and behaviors.
