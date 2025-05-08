@@ -53,11 +53,23 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
   return result;
 }
 
+// console.log(concatenateArrays(["a", "b"], ["c"]));       // Output: ["a", "b", "c"]
+// console.log(concatenateArrays([1, 2], [3, 4], [5]));     // Ou [1, 2, 3, 4, 5]
+//
 
-console.log(concatenateArrays(["a", "b"], ["c"]));       // Output: ["a", "b", "c"]
-console.log(concatenateArrays([1, 2], [3, 4], [5]));     // Ou [1, 2, 3, 4, 5]
+// Create Class for vehicle
+class Vehicle {
+  // properties
+  constructor(private make: string, private year: number) {
+    // initialize make and year properties
+  }
+  // methods
+  getInfo() {
+    console.log(`"Make: ${this.make}, Year: ${this.year}"`)
+  }
+}
 
-
-
-
+const myCar = new Car("Toyota", 2020, "Corolla");
+myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
+myCar.getModel();  // Output: "Model: Corolla"
 
