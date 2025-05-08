@@ -151,6 +151,37 @@ function getDayType(day: Day): string {
   }
 }
 
-console.log(getDayType(Day.Monday));   // Output: "Weekday"
-console.log(getDayType(Day.Sunday));   // Output: "Weekend"
+// console.log(getDayType(Day.Monday));   // Output: "Weekday"
+// console.log(getDayType(Day.Sunday));   // Output: "Weekend"
+
+//Description: Create an async function that:
+// Returns the square of a number after 1 second
+// Rejects if the number is negative
+async function squareAsync(n: number): Promise<number> {
+  // wait 1 sec
+  // return n;
+  return new Promise((resolve, reject) => {
+    if (n < 0) {
+      reject("Error: Negative number not allowed")
+    } else {
+
+      setTimeout(() => {
+        resolve(n * n);
+      }, 1000); // 1000ms = 1 sec
+    }
+  })
+}
+
+
+squareAsync(4).then(console.log);        // Output after 1s: 16
+squareAsync(-3).catch(console.error);    // Output: Error: Negative number not allowed
+
+
+
+
+
+
+
+
+
 
