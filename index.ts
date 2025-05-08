@@ -79,11 +79,11 @@ class Car extends Vehicle {
     console.log(`"Model: ${this.model}"`);
   }
 }
-
-const myCar = new Car("Toyota", 2020, "Corolla");
-myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
-myCar.getModel();  // Output: "Model: Corolla"
-
+//
+// const myCar = new Car("Toyota", 2020, "Corolla");
+// myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
+// myCar.getModel();  // Output: "Model: Corolla"
+//
 
 // Write a function that takes a string | number and returns:
 // The length if it's a string
@@ -96,6 +96,42 @@ function processValue(value: string | number): number {
   }
 }
 
-console.log(processValue("hello")); // Output: 5
-console.log(processValue(10));      // Output: 20
+// console.log(processValue("hello")); // Output: 5
+// console.log(processValue(10));      // Output: 20
+//
+// Description: Define an interface Product and 
+// create a function to find the product with the highest price in an array.
+// If the array is empty, return null.
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  let highestProduct = null;
+  let price = 0;
+
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].price > price) {
+      highestProduct = products[i];
+      price = products[i].price;
+    }
+  }
+
+  return highestProduct;
+}
+
+// testing
+const products = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 }
+];
+
+console.log(getMostExpensiveProduct(products));
+// Output: { name: "Bag", price: 50 }
+
+
+
+
 
