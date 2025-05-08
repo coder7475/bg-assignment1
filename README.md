@@ -19,7 +19,7 @@ type AliasName = TypeDefinition;
 
 #### **Examples**
 
-```typescript
+```ts
 // Primitive
 type ID = number;
 
