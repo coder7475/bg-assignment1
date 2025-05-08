@@ -1,5 +1,7 @@
 # Typescript Assignment of PH
 
+Assignment Link: <https://github.com/Apollo-Level2-Web-Dev/B5-Assignment-1>
+
 ## Blog Post on Q1: Differences Between Interfaces and Types in TypeScript
 
 ### Table of Contents
