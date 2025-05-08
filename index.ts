@@ -19,7 +19,7 @@ type Item = {
 }
 // a function taht filtess an items based on rating
 function filterByRating(items: Item[]): Item[] {
-  const result = [];
+  const result: Item[] = [];
 
   for (let i = 0; i < items.length; i++) {
     if (items[i].rating >= 4) {
@@ -30,12 +30,34 @@ function filterByRating(items: Item[]): Item[] {
   return result;
 }
 
-const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book C", rating: 5.0 }
-];
+// const books = [
+//   { title: "Book A", rating: 4.5 },
+//   { title: "Book B", rating: 3.2 },
+//   { title: "Book C", rating: 5.0 }
+// ];
+//
+// console.log(filterByRating(books));
+// // Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
 
-console.log(filterByRating(books));
-// Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
+//  generic function that concatenates multiple arrays of the same type
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  // console.log(arrays)
+  const result: T[] = [];
+
+  for (let i = 0; i < arrays.length; i++) {
+    // console.log(arrays[i])
+    result.push(...arrays[i])
+    // console.log(result)
+  }
+
+  return result;
+}
+
+
+console.log(concatenateArrays(["a", "b"], ["c"]));       // Output: ["a", "b", "c"]
+console.log(concatenateArrays([1, 2], [3, 4], [5]));     // Ou [1, 2, 3, 4, 5]
+
+
+
+
 
