@@ -128,10 +128,29 @@ const products = [
   { name: "Bag", price: 50 }
 ];
 
-console.log(getMostExpensiveProduct(products));
+// console.log(getMostExpensiveProduct(products));
 // Output: { name: "Bag", price: 50 }
 
+// Create a function that returns "Weekday" or "Weekend" based on the input day.
 
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
+}
 
+function getDayType(day: Day): string {
+  if (day === Day.Sunday) {
+    return "Weekend";
+  } else {
+    return "Weekday"
+  }
+}
 
+console.log(getDayType(Day.Monday));   // Output: "Weekday"
+console.log(getDayType(Day.Sunday));   // Output: "Weekend"
 
