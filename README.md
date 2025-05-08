@@ -106,21 +106,6 @@ type PersonKeys = keyof Person;
 
 Now you can use `PersonKeys` to restrict values to only valid keys of `Person`.
 
----
-
-### ✅ **Use Case in a Generic Function**
-
-```ts
-function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
-  return obj[key];
-}
-
-const person = { name: "Alice", age: 25, isStudent: true };
-
-const name = getProperty(person, "name"); // type: string
-const age = getProperty(person, "age");   // type: number
-// getProperty(person, "email"); // ❌ Error: "email" is not a key of person
-```
 
 ---
 
@@ -128,5 +113,3 @@ const age = getProperty(person, "age");   // type: number
 
 - `keyof` extracts the **property names** of a type as a union.
 - Ensures **type safety** when accessing or manipulating object properties dynamically.
-
-Would you like an example combining `keyof` with `typeof` or `Record`?
