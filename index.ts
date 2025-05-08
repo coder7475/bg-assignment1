@@ -69,6 +69,17 @@ class Vehicle {
   }
 }
 
+class Car extends Vehicle {
+  // passing make & year, declaring model propertie
+  constructor(make: string, year: number, private model: string) {
+    super(make, year)
+  }
+  // methods
+  getModel() {
+    console.log(`"Model: ${this.model}"`);
+  }
+}
+
 const myCar = new Car("Toyota", 2020, "Corolla");
 myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
 myCar.getModel();  // Output: "Model: Corolla"
